@@ -26,4 +26,8 @@
     <string name="change_password">Change Password</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="account">Account</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="morgan">Morgan</string>
+    <string name="language">Language</string>
+    <string name="arrow">arrow</string>
 </resources>

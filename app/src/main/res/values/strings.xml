@@ -30,4 +30,11 @@
     <string name="morgan">Morgan</string>
     <string name="language">Language</string>
     <string name="arrow">arrow</string>
+    <string name="morgan_hah">Morgan Hah</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="_5599_661_6611">+5599-661-6611</string>
+    <string name="morganhah99_gmail_com">morganhah99@gmail.com</string>
+    <string name="cards">Cards</string>
+    <string name="profile_details">Profile Details</string>
 </resources>

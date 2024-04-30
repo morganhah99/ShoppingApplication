@@ -8,14 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.shoppingapplication.R
+import com.example.shoppingapplication.ShoppingApplication
 import com.example.shoppingapplication.databinding.FragmentProteinListBinding
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [proteinListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProteinListFragment : Fragment() {
 
 
@@ -34,10 +30,36 @@ class ProteinListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[ProteinListViewModel::class.java]
 
+        viewModel.foodCart.observe(viewLifecycleOwner) { currentCart ->
+            // will always trigger when there's a new value for COUNTER in ViewModel
+            binding.proteinCart.text = currentCart.toString()
+        }
+
         binding.apply {
-            btBeef.text = viewModel.beefValue.toString()
-            btChicken.text = viewModel.chickenValue.toString()
-            btPork.text = viewModel.porkValue.toString()
+            btnAddBeef.text = viewModel.beefValue.toString()
+            btnAddChicken.text = viewModel.chickenValue.toString()
+            btnAddPork.text = viewModel.porkValue.toString()
+
+            btnAddBeef.setOnClickListener {
+                viewModel.addToCart("Beef")
+            }
+            btnAddChicken.setOnClickListener {
+                viewModel.addToCart("Chicken")
+            }
+            btnAddPork.setOnClickListener {
+                viewModel.addToCart("Pork")
+            }
+
+            btnRemoveBeef.setOnClickListener {
+                viewModel.removeFromCart("Beef")
+            }
+            btnRemoveChicken.setOnClickListener {
+                viewModel.removeFromCart("Chicken")
+            }
+            btnRemovePork.setOnClickListener {
+                viewModel.removeFromCart("Pork")
+            }
+
 
         }
     }

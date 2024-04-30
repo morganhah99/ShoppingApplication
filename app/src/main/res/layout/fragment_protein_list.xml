@@ -7,22 +7,64 @@
     android:orientation="vertical"
     tools:context=".ui.category.CategoryFragment">
 
-
-    <Button
-        android:id="@+id/btPork"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Pork" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btBeef"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        tools:text="Beef" />
+        <Button
+            android:id="@+id/btnAddChicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/btChicken"
-        android:layout_width="300dp"
+        <Button
+            android:id="@+id/btnRemoveChicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/add_to_cart" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Chicken" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddPork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnRemovePork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/add_to_cart" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddBeef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnRemoveBeef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/add_to_cart" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/proteinCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="HELLO WORLD" />
 </LinearLayout>

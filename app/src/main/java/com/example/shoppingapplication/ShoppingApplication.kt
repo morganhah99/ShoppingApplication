@@ -5,7 +5,7 @@ import android.app.Application
 class ShoppingApplication : Application() {
 
     object Singleton {
-        data class FoodCategory(val name: String, val foodItems: Map<String, Int>)
+        data class FoodCategory(val category: String, val foodItemsAndPrice: Map<String, Int>)
 
         val foodCategories = listOf(
             FoodCategory("Protein", mapOf("Beef" to 1, "Chicken" to 2, "Pork" to 3)),
@@ -13,11 +13,8 @@ class ShoppingApplication : Application() {
             FoodCategory("Vegetable", mapOf("Broccoli" to 1, "Carrots" to 2, "Spinach" to 3)),
             FoodCategory("Fruit", mapOf("Apple" to 1, "Oranges" to 2, "Watermelon" to 3))
         )
-        fun addToCart(foodItem: String) {
-            foodCart.add(foodItem)
 
-        }
-        lateinit var foodCart: MutableList<String>
+        lateinit var totalCart: MutableList<String>
     }
 
 

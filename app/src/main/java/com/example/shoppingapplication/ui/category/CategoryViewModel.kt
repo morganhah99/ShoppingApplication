@@ -7,13 +7,13 @@ class CategoryViewModel: ViewModel() {
 
 
 
-    val proteinCategory = ShoppingApplication.Singleton.foodCategories[0].name
+    val proteinCategory = ShoppingApplication.Singleton.foodCategories[0].category
 
-    val carbCategory = ShoppingApplication.Singleton.foodCategories[1].name
+    val carbCategory = ShoppingApplication.Singleton.foodCategories[1].category
 
-    val vegetableCategory = ShoppingApplication.Singleton.foodCategories[2].name
+    val vegetableCategory = ShoppingApplication.Singleton.foodCategories[2].category
 
-    val fruitCategory = ShoppingApplication.Singleton.foodCategories[3].name
+    val fruitCategory = ShoppingApplication.Singleton.foodCategories[3].category
 
 
 

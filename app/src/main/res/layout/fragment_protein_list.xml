@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.category.CategoryFragment">
+
+
+    <Button
+        android:id="@+id/btPork"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:text="Pork" />
+
+    <Button
+        android:id="@+id/btBeef"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:text="Beef" />
+
+    <Button
+        android:id="@+id/btChicken"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:text="Chicken" />
+</LinearLayout>

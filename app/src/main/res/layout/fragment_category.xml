@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoryFragment">
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.category.CategoryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/btProtein"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:text="Protein" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btFruit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:text="Fruit" />
+
+    <Button
+        android:id="@+id/btVegetable"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:text="Vegetable" />
+
+    <Button
+        android:id="@+id/btCarb"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        tools:text="Carb" />
+
+
+</LinearLayout>

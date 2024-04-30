@@ -12,7 +12,7 @@ class ProteinListViewModel : ViewModel() {
         ?.foodItemsAndPrice?.keys?.firstOrNull { it == "Beef" }
 
     val porkValue = ShoppingApplication.Singleton.foodCategories
-        .find { it.category == "Protein" } // Find the "Protein" category
+        .find { it.category == "Protein" }
         ?.foodItemsAndPrice?.keys?.firstOrNull { it == "Pork" }
 
     val chickenValue = ShoppingApplication.Singleton.foodCategories

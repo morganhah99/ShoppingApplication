@@ -4,8 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.shoppingapplication.R
+import com.example.shoppingapplication.databinding.FragmentListBinding
+import com.example.shoppingapplication.databinding.FragmentProteinListBinding
+import com.example.shoppingapplication.databinding.FragmentShoppingListBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -14,13 +19,24 @@ import com.example.shoppingapplication.R
  */
 class ShoppingListFragment : Fragment() {
 
+    lateinit var binding: FragmentShoppingListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shopping_list, container, false)
+
+        val shoppingListViewModel =
+            ViewModelProvider(this).get(ShoppingListViewModel::class.java)
+
+        binding = FragmentShoppingListBinding.inflate(inflater, container, false)
+        val textView: TextView = binding.test
+        shoppingListViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
+        return binding.root
+
+
     }
 
 

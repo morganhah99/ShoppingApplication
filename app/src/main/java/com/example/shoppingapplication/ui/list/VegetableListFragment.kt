@@ -1,4 +1,4 @@
-package com.example.shoppingapplication.ui.list.vegetableList
+package com.example.shoppingapplication.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

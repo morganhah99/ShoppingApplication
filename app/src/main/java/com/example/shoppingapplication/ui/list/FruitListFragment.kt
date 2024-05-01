@@ -1,4 +1,4 @@
-package com.example.shoppingapplication.ui.list.carbList
+package com.example.shoppingapplication.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,10 +10,13 @@ import com.example.shoppingapplication.R
 
 /**
  * A simple [Fragment] subclass.
- * Use the [carbListFragment.newInstance] factory method to
+ * Use the [FruitListFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class carbListFragment : Fragment() {
+class FruitListFragment : Fragment() {
+
+
+
 
 
     override fun onCreateView(
@@ -21,7 +24,7 @@ class carbListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_carb_list, container, false)
+        return inflater.inflate(R.layout.fragment_fruit_list, container, false)
     }
 
 

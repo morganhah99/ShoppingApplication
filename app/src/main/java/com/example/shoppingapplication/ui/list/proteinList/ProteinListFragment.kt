@@ -40,6 +40,7 @@ class ProteinListFragment : Fragment() {
             btnAddChicken.text = viewModel.chickenValue.toString()
             btnAddPork.text = viewModel.porkValue.toString()
 
+
             btnAddBeef.setOnClickListener {
                 viewModel.addToCart("Beef")
             }

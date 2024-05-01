@@ -73,4 +73,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:text="HELLO WORLD" />
+
+    <TextView
+        android:id="@+id/totalCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="HELLO WORLD" />
 </LinearLayout>

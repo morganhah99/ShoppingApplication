@@ -84,7 +84,7 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/fruitListFragment"
-        android:name="com.example.shoppingapplication.ui.list.fruitList.FruitListFragment"
+        android:name="com.example.shoppingapplication.ui.list.FruitListFragment"
         android:label="Fruit List"
         tools:layout="@layout/fragment_fruit_list" />
     <fragment
@@ -94,12 +94,12 @@
         tools:layout="@layout/fragment_protein_list" />
     <fragment
         android:id="@+id/vegetableListFragment"
-        android:name="com.example.shoppingapplication.ui.list.vegetableList.vegetableListFragment"
+        android:name="com.example.shoppingapplication.ui.list.vegetableListFragment"
         android:label="Vegetable List"
         tools:layout="@layout/fragment_vegetable_list" />
     <fragment
         android:id="@+id/carbListFragment"
-        android:name="com.example.shoppingapplication.ui.list.carbList.carbListFragment"
+        android:name="com.example.shoppingapplication.ui.list.carbListFragment"
         android:label="Carb List"
         tools:layout="@layout/fragment_carb_list" />
 

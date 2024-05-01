@@ -41,6 +41,7 @@ class CategoryFragment : Fragment() {
             btFruit.text = viewModel.fruitCategory
             btVegetable.text = viewModel.vegetableCategory
 
+
             btFruit.setOnClickListener {
                 findNavController().navigate(R.id.action_nav_category_to_fruitListFragment)
             }

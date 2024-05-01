@@ -52,4 +52,18 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("androidx.cardview:cardview:1.0.0")
+
+    // Retrofit -> network
+    implementation (libs.retrofit)
+
+    //Okhttp
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    //Glide
+    implementation(libs.glide)
+
+    //Gson
+    implementation(libs.gson)
+    implementation (libs.converter.gson)
 }

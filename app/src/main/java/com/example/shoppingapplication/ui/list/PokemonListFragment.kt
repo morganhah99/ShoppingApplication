@@ -23,7 +23,7 @@ class ShoppingListFragment : Fragment() {
             ViewModelProvider(this).get(ShoppingListViewModel::class.java)
 
         binding = FragmentPokemonListBinding.inflate(inflater, container, false)
-        val textView: TextView = binding.tvPokemonName
+        val textView: TextView = binding.textView
         shoppingListViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

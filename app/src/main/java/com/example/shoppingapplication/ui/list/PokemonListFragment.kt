@@ -9,11 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.shoppingapplication.databinding.FragmentPokemonListBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ShoppingListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class ShoppingListFragment : Fragment() {
 
     lateinit var binding: FragmentPokemonListBinding
@@ -21,13 +17,13 @@ class ShoppingListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val shoppingListViewModel =
             ViewModelProvider(this).get(ShoppingListViewModel::class.java)
 
         binding = FragmentPokemonListBinding.inflate(inflater, container, false)
-        val textView: TextView = binding.test
+        val textView: TextView = binding.tvPokemonName
         shoppingListViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

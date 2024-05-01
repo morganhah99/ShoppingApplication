@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.nav_home,
                 R.id.nav_category,
-                R.id.nav_shoppingList,
+                R.id.nav_pokemonList,
                 R.id.nav_cart,
                 R.id.nav_history,
                 R.id.nav_profile,

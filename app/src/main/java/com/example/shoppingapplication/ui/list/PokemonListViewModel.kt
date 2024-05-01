@@ -14,17 +14,10 @@ class ShoppingListViewModel: ViewModel() {
     val text: LiveData<String> = _text
 
     init {
-//        getDogDetails()
         getPokemon()
     }
 
-//    private fun getDogDetails() {
-//        viewModelScope.launch {
-//            val result = RetrofitInstance.apiClient.getDogFacts()
-//            if (!result.facts.isNullOrEmpty())
-//                _text.postValue(result.facts.joinToString())
-//        }
-//    }
+
 
     private fun getPokemon() {
         viewModelScope.launch {

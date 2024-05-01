@@ -7,10 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.shoppingapplication.R
-import com.example.shoppingapplication.databinding.FragmentListBinding
-import com.example.shoppingapplication.databinding.FragmentProteinListBinding
-import com.example.shoppingapplication.databinding.FragmentShoppingListBinding
+import com.example.shoppingapplication.databinding.FragmentPokemonListBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -19,7 +16,7 @@ import com.example.shoppingapplication.databinding.FragmentShoppingListBinding
  */
 class ShoppingListFragment : Fragment() {
 
-    lateinit var binding: FragmentShoppingListBinding
+    lateinit var binding: FragmentPokemonListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,7 +26,7 @@ class ShoppingListFragment : Fragment() {
         val shoppingListViewModel =
             ViewModelProvider(this).get(ShoppingListViewModel::class.java)
 
-        binding = FragmentShoppingListBinding.inflate(inflater, container, false)
+        binding = FragmentPokemonListBinding.inflate(inflater, container, false)
         val textView: TextView = binding.test
         shoppingListViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it

@@ -54,10 +54,10 @@
             app:destination="@id/vegetableListFragment" />
     </fragment>
     <fragment
-        android:id="@+id/nav_shoppingList"
+        android:id="@+id/nav_pokemonList"
         android:name="com.example.shoppingapplication.ui.list.ShoppingListFragment"
-        android:label="Shopping List"
-        tools:layout="@layout/fragment_shopping_list" />
+        android:label="Pokemon List"
+        tools:layout="@layout/fragment_pokemon_list" />
     <fragment
         android:id="@+id/nav_cart"
         android:name="com.example.shoppingapplication.ui.cart.CartFragment"

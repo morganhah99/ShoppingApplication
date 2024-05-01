@@ -13,9 +13,9 @@
             android:icon="@drawable/category_logo"
             android:title="@string/category" />
         <item
-            android:id="@+id/nav_shoppingList"
+            android:id="@+id/nav_pokemonList"
             android:icon="@drawable/list_logo"
-            android:title="@string/shopping_list" />
+            android:title="@string/pokemon_list" />
         <item
             android:id="@+id/nav_cart"
             android:icon="@drawable/cart_logo"

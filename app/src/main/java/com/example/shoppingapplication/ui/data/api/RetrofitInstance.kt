@@ -23,6 +23,6 @@ object RetrofitInstance {
         .build()
 
     // Create reference to our local API Endpoints
-    val apiClient = retrofit.create(ApiEndpoints::class.java)
+    val apiClient = retrofit.create(APIEndPoints::class.java)
 
 }

@@ -7,9 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.shoppingapplication.data.api.RetrofitInstance
 import kotlinx.coroutines.launch
 
-class ShoppingListViewModel: ViewModel() {
+class ShoppingListViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = "This is shopping Fragment"
+        value = "This is a Pokemon Fragment"
     }
     val text: LiveData<String> = _text
 
@@ -17,13 +17,13 @@ class ShoppingListViewModel: ViewModel() {
         getPokemon()
     }
 
-
-
     private fun getPokemon() {
         viewModelScope.launch {
             val result = RetrofitInstance.apiClient.getPokemon()
-            if(!result.results.isNullOrEmpty())
-                _text.postValue(result.results.joinToString())
+            if (!result.results.isNullOrEmpty()) {
+                val pokemonNames = result.results.map { it?.name }
+                _text.postValue(pokemonNames.joinToString())
+            }
         }
     }
 }

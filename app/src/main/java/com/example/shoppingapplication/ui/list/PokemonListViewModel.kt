@@ -9,10 +9,8 @@ import com.example.shoppingapplication.ui.data.model.Pokemon
 import kotlinx.coroutines.launch
 
 class PokemonListViewModel : ViewModel() {
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is a Pokemon Fragment"
-    }
-    val text: LiveData<String> = _text
+    var pokemonList: List<Pokemon> = emptyList()
+        private set
 
     init {
         getPokemon()
@@ -22,8 +20,7 @@ class PokemonListViewModel : ViewModel() {
         viewModelScope.launch {
             val result = RetrofitInstance.apiClient.getPokemon()
             if (!result.results.isNullOrEmpty()) {
-                val pokemonList = result.results.map { Pokemon(it?.name) }
-                _text.postValue(pokemonList.joinToString { it.name.toString() })
+                 pokemonList = result.results.map { Pokemon(it?.name) }
             }
         }
     }

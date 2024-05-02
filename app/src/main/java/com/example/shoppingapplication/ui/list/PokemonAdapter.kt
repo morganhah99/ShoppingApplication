@@ -8,28 +8,24 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppingapplication.R
 import com.example.shoppingapplication.ui.data.model.Pokemon
 
-class PokemonAdapter(private val dataSet: Array<Pokemon>) :
-    RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
+class PokemonAdapter(
+    var pokemons: List<Pokemon>
+) : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
-        class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val textView: TextView
+    inner class PokemonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-            init {
-                textView = view.findViewById(R.id.textView)
-            }
-        }
-
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.fragment_pokemon_list, viewGroup, false)
-
-        return ViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_pokemon, parent, false)
+        return PokemonViewHolder(view)
     }
 
-    override fun getItemCount() = dataSet.size
-
-    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.textView.text = dataSet[position].toString()
+    override fun getItemCount(): Int {
+        return pokemons.size
     }
 
+    override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
+        val tvPokemon = holder.itemView.findViewById<TextView>(R.id.tvPokemon)
+        tvPokemon.text = pokemons[position].name
+
+    }
 }

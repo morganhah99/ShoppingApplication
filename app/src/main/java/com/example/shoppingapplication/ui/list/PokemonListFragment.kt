@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.shoppingapplication.databinding.FragmentPokemonListBinding
 
 
-class ShoppingListFragment : Fragment() {
+class PokemonListFragment : Fragment() {
 
     lateinit var binding: FragmentPokemonListBinding
 

@@ -19,12 +19,12 @@ class ShoppingListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val shoppingListViewModel =
-            ViewModelProvider(this).get(ShoppingListViewModel::class.java)
+        val pokemonListViewModel =
+            ViewModelProvider(this).get(PokemonListViewModel::class.java)
 
         binding = FragmentPokemonListBinding.inflate(inflater, container, false)
         val textView: TextView = binding.textView
-        shoppingListViewModel.text.observe(viewLifecycleOwner) {
+        pokemonListViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return binding.root

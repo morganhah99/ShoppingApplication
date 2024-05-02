@@ -8,7 +8,7 @@ import com.example.shoppingapplication.data.api.RetrofitInstance
 import com.example.shoppingapplication.ui.data.model.Pokemon
 import kotlinx.coroutines.launch
 
-class ShoppingListViewModel : ViewModel() {
+class PokemonListViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
         value = "This is a Pokemon Fragment"
     }

@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_pokemonList"
-        android:name="com.example.shoppingapplication.ui.list.ShoppingListFragment"
+        android:name="com.example.shoppingapplication.ui.list.PokemonListFragment"
         android:label="Pokemon List"
         tools:layout="@layout/fragment_pokemon_list" />
     <fragment
